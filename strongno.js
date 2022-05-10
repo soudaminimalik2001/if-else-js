@@ -1,11 +1,14 @@
-let b=require("readline-sync")
-let a=b.question("enter pw")
-
-if (a.length>5 && a.length<15){
-    if (a>"A" && a<"Z" || a>"a" && a<"z" || a>0 || a=="@" || a=="#" || a=="₹" || a=="$" || a=="*"){
+let num=require("readline-sync")
+let strongPassword=num.question("enter no:-")
+if  (strongPassword.length>=6 && strongPassword.length<=12){
+    if(strongPassword>"A" && strongPassword<"Z" || strongPassword>"a" && strongPassword<"z" || strongPassword>0 && strongPassword<9 || strongPassword=="@" && strongPassword=="#"){
         console.log("strong password")
     }
     else{
-        console.log("no")
-    } 
+        console.log("not strong password")
+    }
+
+}
+else{
+    console.log("invalid")
 }
